@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKHILxCINEPOLI'S</title>
+    <link rel="stylesheet" href="b.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>AKHILxCINEPOLI'S</h1>
+        </header>
+
+        <div class="movie-selection">
+            <h2>Select Movie</h2>
+            <div class="movie-card">
+                <img src="images/a.jpg" >
+                <div class="movie-info">
+                  
+                    <h3>GAMECHANGER</h3>
+                    <p>Release Date:  10 Jan 2025</p>
+                    <p>Genre: Action</p>
+                    <button class="select-movie" onclick="selectMovie('Action Movie', 12)">Select</button>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="images/b.jpg">
+                <div class="movie-info">
+                    <h3>Daaku Maharaaj</h3>
+                    <p>Release Date:  12 jan 2025</p>
+                    <p>Genre: Comedy</p>
+                    <button class="select-movie" onclick="selectMovie('Comedy Movie', 10)">Select</button>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="images/c.jpg">
+                <div class="movie-info">
+                    <h3>MARCO</h3>
+                    <p>Release Date:  1 jan 2025</p>
+                    <p>Genre: ACTION</p>
+                    <button class="select-movie" onclick="selectMovie('Comedy Movie', 10)">Select</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ticket-booking">
+            <h2>Ticket Booking</h2>
+            <form id="ticket-form">
+                <div class="form-group">
+                    <label for="ticket-count">Number of Tickets</label>
+                    <input type="number" id="ticket-count" name="ticket-count" min="1" max="10" value="1" onchange="updateTotalPrice()">
+                </div>
+                <div class="form-group">
+                    <label for="total-price">Total Price: $<span id="total-price">12</span></label>
+                </div>
+                <button type="submit" id="book-button">Book Now</button>
+            </form>
+        </div>
+
+        <div id="confirmation-modal" class="modal">
+            <div class="modal-content">
+                <h2>Booking Confirmed!</h2>
+                <p id="confirmation-message"></p>
+                <button onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="c.js"></script>
+</body>
+</html>
